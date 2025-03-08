@@ -5,35 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thank You Message</title>
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin: 2rem; }
-    input, button { margin-top: 10px; padding: 10px; font-size: 16px; }
-    #message { margin-top: 20px; font-size: 1.2rem; font-weight: bold; }
+    body { 
+      font-family: Arial, sans-serif; 
+      text-align: center; 
+      margin: 2rem; 
+    }
+    input, button { 
+      margin-top: 10px; 
+      padding: 10px; 
+      font-size: 16px; 
+    }
+    #message-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    #message {
+      font-size: 1.2rem; 
+      font-weight: bold;
+      margin: 0 20px; /* Adds spacing between images and text */
+    }
+    .thankyou-image {
+      width: 100px; /* Adjust size as needed */
+      height: auto;
+    }
   </style>
 </head>
 <body>
   <h1>Enter Your Code</h1>
   <input type="text" id="codeInput" placeholder="Enter your code">
   <button onclick="checkCode()">Submit</button>
-  <div id="message"></div>
 
-  <script>
-    // List of codes and personalized thank-you messages
-    const messages = {
-      "alice123": "Thank you, Alice! Your support means the world.",
-      "bob456": "Bob, you're amazing! We appreciate your help.",
-      "charlie789": "Charlie, thank you for your kindness and generosity."
-    };
-
-    function checkCode() {
-      const code = document.getElementById('codeInput').value.trim();
-      const messageDiv = document.getElementById('message');
-
-      if (messages[code]) {
-        messageDiv.textContent = messages[code];
-      } else {
-        messageDiv.textContent = "Invalid code. Please try again.";
-      }
-    }
-  </script>
-</body>
-</html>
+  <div id="message-container">
+    <img src="https://gobmush.wdfiles.com/local--files/saskia/Tinkles" class="thankyou
